@@ -31,7 +31,7 @@ body {
 }
 
 .header {
-    border: 2px solid salmon;
+    border: 2px solid white;
     grid-column: 2/3;
     background: white;
     /* display: grid; */
@@ -47,15 +47,19 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
+    padding-bottom: 20px;
 
 }
 
 .first-line .screen {
     height: 50px;
-    width: 900px;
+    width: 800px;
     background: #edeeed;
     border: none;
     border-radius: 30px;
+    margin-right: 300px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
 
 }
 
@@ -70,41 +74,128 @@ body {
 .second-line ol {
     list-style: none;
     text-decoration: none;
+    padding-right: 30px;
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+    margin-left: 400px;
 }
 
-.links {
-    display: flex;
-}
 
 .second-line .links ol a {
     text-decoration: none;
     border: none;
-    width: 200px;
-    height: 90px;
-    background-color: var(--darkgray);
+    background-color: var(--primary);
     color: white;
-    border-radius: 12px;
+    border-radius: 5px;
+    padding: 10px 30px;
 
+}
+
+.second-line .links ol a:hover {
+    background: var(--light);
 }
 
 
 
 
-
-
-
-
-
-
-
-/* search */
-
-
-
-
+/* main */
 
 .main {
-    border: 2px solid pink;
+
     grid-column: 2/3;
-    background: pink;
+    background: #edeeed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 30px;
+    gap: 20px;
+    grid-template-areas:
+        'a b c'
+        'd e h'
+        'f g h';
+}
+
+
+.item2 {
+    grid-area: b;
+}
+
+.item3 {}
+
+.item4 {
+    grid-area: d;
+}
+
+.item5 {
+    grid-area: e;
+}
+
+.item6 {
+    grid-area: f;
+}
+
+.item7 {
+    grid-area: g;
+}
+
+.item8 {
+    grid-area: h;
+}
+
+
+.main .items {
+
+    background-color: white;
+    box-shadow: var(--shadow);
+    border-radius: 15px;
+    border-left: 10px solid var(--primary);
+    padding: 20px;
+}
+
+.items:nth-child(1) {
+    grid-area: a;
+
+}
+
+/* .items:nth-child(3) { 
+    grid-area: c;
+    grid-row: 1 /span 2;
+    gap: 20px;
+}
+
+
+.items:nth-child(3) {
+    grid-area: c;
+    grid-row: 1 /span 2;
+    gap: 20px;
+/* } */
+
+/* sidebar */
+
+.sidebar {
+
+    background: var(--light);
+    box-shadow: var(--shadow);
+    border: none;
+}
+
+.sidebar h1 {
+    margin-bottom: 30px;
+}
+
+.sidebar h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+.sidebar h2 {
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+.sidebar .space {
+    margin-top: 50px;
 }
